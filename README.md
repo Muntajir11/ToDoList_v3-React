@@ -2,9 +2,9 @@
 This is a simple to-do list application built using React.js. 
 
 The application leverages the following concepts:
-# React useState Hook: Used to manage state within functional components.
-# Spread Operator: Employed to dynamically update the to-do list array by creating a new array with the existing items plus the new item.
-# Map Function: Utilized to render list items dynamically, iterating over the array of tasks and creating a list item for each task.
+### React useState Hook: Used to manage state within functional components.
+### Spread Operator: Employed to dynamically update the to-do list array by creating a new array with the existing items plus the new item.
+### Map Function: Utilized to render list items dynamically, iterating over the array of tasks and creating a list item for each task.
 
 ## Technologies Used:
 - React.js
