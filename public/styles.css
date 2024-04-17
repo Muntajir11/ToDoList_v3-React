@@ -1,3 +1,4 @@
+
 body {
   background-color: #ffeaa7;
   min-height: 70vh;
@@ -10,8 +11,19 @@ body {
   font-family: "Architects Daughter", cursive;
   text-align: center;
   font-size: 130%;
-  overflow: hidden;
+  overflow: auto; 
 }
+
+
+body::-webkit-scrollbar {
+  width: 8px; 
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: blueviolet; 
+  border-radius: 10px; 
+}
+
 
 .container {
   width: 100vw;
@@ -84,13 +96,8 @@ li {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 10px; 
-<<<<<<< HEAD
-  
+  padding: 10px;  
  
-}
-
-=======
 }
 
 @media only screen and (max-width: 600px) {
@@ -98,4 +105,3 @@ li {
     max-width: 90vw; 
   }
 }
->>>>>>> 69ff2d2546f3f3eea545e4872d8937e503602741
