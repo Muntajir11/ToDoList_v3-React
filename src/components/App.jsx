@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 import CreateList from "./ToDoItem";
+import InputArea from "./InputArea";
 
 function App() {
 
-  const [inputText, setInputText] = useState("");
+
   const [toDoList, updateToDoList] = useState([]);
 
 
-  function handleChange(event) {
-
-    const newText = event.target.value;
-    setInputText(newText);
-  }
-
-  function addList() {
+  function addList(inputText) {
 
     updateToDoList(prev => {
       // if(inputText != '')
@@ -26,14 +21,11 @@ function App() {
       return inputText != '' ? [...prev, inputText] : [...prev];
 
     });
-    setInputText("");
   }
 
-  function deleteItem(id){
-
-
+  function deleteItem(id) {
     updateToDoList(prev => {
-      
+
       return prev.filter((item, index) => {
         return index != id;
       });
@@ -47,25 +39,22 @@ function App() {
         <h1>To-Do List</h1>
       </div>
 
-      <div className="form">
-        <input onChange={handleChange} type="text" value={inputText} />
-        <button onClick={addList}>
-          <span>Add</span>
-        </button>
-      </div>
+      <InputArea
+        onAdd={addList}
+      />
 
       <div>
         <ul>
-          {toDoList.map((item , index) => (
-          
-          <CreateList 
-             key={index}
-             id={index}
-             text={item}
-             onChecked={deleteItem}
-          
-          />
-          
+          {toDoList.map((item, index) => (
+
+            <CreateList
+              key={index}
+              id={index}
+              text={item}
+              onChecked={deleteItem}
+
+            />
+
           ))}
         </ul>
       </div>
