@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
   height: auto;
   min-height: 500px;
   max-width: 500px;
@@ -88,4 +88,3 @@ li {
   
  
 }
-

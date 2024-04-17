@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CreateList from "./ToDoItem";
 
 function App() {
 
@@ -28,6 +29,17 @@ function App() {
     setInputText("");
   }
 
+  function deleteItem(id){
+
+
+    updateToDoList(prev => {
+      
+      return prev.filter((item, index) => {
+        return index != id;
+      });
+    });
+  }
+
   return (
     <div className="container">
 
@@ -44,7 +56,17 @@ function App() {
 
       <div>
         <ul>
-          {toDoList.map(item => <li> {item} </li>)}
+          {toDoList.map((item , index) => (
+          
+          <CreateList 
+             key={index}
+             id={index}
+             text={item}
+             onChecked={deleteItem}
+          
+          />
+          
+          ))}
         </ul>
       </div>
 
