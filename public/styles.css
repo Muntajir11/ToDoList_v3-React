@@ -85,7 +85,17 @@ li {
   left: 0;
   width: 100%;
   padding: 10px; 
+<<<<<<< HEAD
   
  
 }
 
+=======
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    max-width: 90vw; 
+  }
+}
+>>>>>>> 69ff2d2546f3f3eea545e4872d8937e503602741
