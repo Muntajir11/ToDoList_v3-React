@@ -70,10 +70,6 @@ function App() {
         </ul>
       </div>
 
-      <div className="refresh">
-        <p>Refresh the page to reset!</p>
-      </div>
-
     </div>
 
 
